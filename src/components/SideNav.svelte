@@ -41,7 +41,7 @@
 
 <style lang="scss">
   .container {
-    width: 20rem;
+    width: 278px;
     height: 100%;
 
     display: flex;
@@ -53,19 +53,14 @@
     display: flex;
     flex-direction: column;
 
-    width: 90%;
-    height: 96%;
+    width: 100%;
+    height: 100%;
 
-    padding: 1rem 0 0;
+    padding-top: 1rem;
 
-    background-color: rgba(var(--app-color-light-rgb), 0.4);
-    backdrop-filter: blur(70px);
+    background-color: #f3f3f3;
 
     color: var(--app-color-light-contrast);
-
-    box-shadow: 0px 0px 5.3px rgba(0, 0, 0, 0.113), 0px 0px 17.9px rgba(0, 0, 0, 0.167),
-      0px 0px 80px rgba(0, 0, 0, 0.28);
-    border-radius: 1rem;
   }
 
   .source-code {
@@ -94,7 +89,11 @@
       text-decoration: none;
       color: var(--app-color-dark);
 
-      padding: 0.7rem 1rem;
+      position: relative;
+
+      // padding: 0.7rem 1rem;
+
+      height: 36px;
 
       cursor: pointer;
 
@@ -115,6 +114,15 @@
         align-items: center;
 
         padding-right: 1rem;
+      }
+
+      &::before {
+        content: '';
+        height: 16px;
+        width: 3px;
+        background: blue;
+        border-radius: 3px;
+        position: absolute;
       }
     }
   }
