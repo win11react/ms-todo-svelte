@@ -61,6 +61,19 @@
     background-color: #f3f3f3;
 
     color: var(--app-color-light-contrast);
+
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      top: 0;
+      right: -16px;
+      box-shadow: -8px -8px #f3f3f3;
+    }
   }
 
   .source-code {
@@ -82,12 +95,21 @@
 
     height: 100%;
 
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
+
     a {
       display: flex;
       align-items: center;
 
       text-decoration: none;
       color: var(--app-color-dark);
+
+      border-radius: 4px;
+
+      padding-left: 1rem;
 
       position: relative;
 
@@ -98,7 +120,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: rgba(var(--app-color-light-rgb), 0.1) !important;
+        background-color: rgb(0 0 0 / 5%) !important;
       }
 
       &:visited {
@@ -120,9 +142,11 @@
         content: '';
         height: 16px;
         width: 3px;
-        background: blue;
+        background: #0067c0;
         border-radius: 3px;
         position: absolute;
+        left: 0;
+        top: 10px;
       }
     }
   }

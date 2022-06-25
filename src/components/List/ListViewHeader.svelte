@@ -58,9 +58,6 @@
 
     width: max-content;
 
-    backdrop-filter: blur(40px);
-    background-color: rgba(var(--app-color-light-rgb), 0.4);
-
     &:focus-within {
       box-shadow: inset 0 0 0 2.3px rgba(var(--app-color-dark-rgb), 0.9);
     }
